@@ -24,7 +24,7 @@
             <li class="<?php echo activate_menu("users"); ?>">
                 <a href="<?php echo base_url("users/"); ?>"><i class="fa fa-users"></i> <span>Users</span></a>
             </li>
-            <li class="treeview <?php echo activate_dropdown("dashboard"); ?>">
+            <!-- <li class="treeview <?php echo activate_dropdown("dashboard"); ?>">
               	<a href="#">
                 	<i class="fa fa-dashboard"></i>
                 	<span>App Dashboard</span>
@@ -34,9 +34,8 @@
                     <li class="<?php echo activate_menu("dashboard/banner"); ?>"><a href="<?php echo base_url("dashboard/banner/"); ?>"><i class="fa fa-circle-o"></i>Banner</a></li>
                     <li class="<?php echo activate_menu("dashboard/topsellers"); ?>"><a href="<?php echo base_url("dashboard/topsellers/"); ?>"><i class="fa fa-circle-o"></i>Top Sellers</a></li>
               	</ul>
-            </li>
-            <?php if($this->session->role!='admin'){ ?>
-            <li class="treeview <?php echo activate_dropdown("profile"); ?>">
+            </li>             -->
+            <!-- <li class="treeview <?php //echo activate_dropdown("profile"); ?>">
               	<a href="#">
                 	<i class="fa fa-users"></i>
                 	<span>Member's Details</span>
@@ -50,10 +49,7 @@
                     <li class="<?php echo activate_menu("profile/kyc"); ?>"><a href="<?php echo base_url("profile/kyc/"); ?>"><i class="fa fa-circle-o"></i>Upload KYC</a></li>
                     <li class="<?php echo activate_menu("profile/welcomeletter"); ?> hidden"><a href="<?php echo base_url("profile/welcomeletter/"); ?>"><i class="fa fa-circle-o"></i>Welcome Letter</a></li>
               	</ul>
-            </li>
-            <?php 
-				}
-			?>
+            </li>             -->
         </ul>
     </section>
     <!-- /.sidebar -->

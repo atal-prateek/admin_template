@@ -1,4 +1,6 @@
 <!-- Content Header (Page header) -->
+<?php 
+if(!empty($breadcrumb) && is_array($breadcrumb)){ ?>
 <section class="content-header">
     <h1>
         <?php echo $title; ?>
@@ -23,8 +25,8 @@
             }
         ?>
     </ol>
-</section>  
-<?php
+</section> 
+<?php } 
 	$popup="hidden";
 	$msg=$pstatus=$picon='';
 	if($this->session->flashdata('msg')!==NULL){

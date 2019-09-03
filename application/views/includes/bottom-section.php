@@ -3,8 +3,7 @@
                 <div class="pull-right hidden-xs hidden">
                 	<b>Version</b> 2.4.0
                 </div>
-                <strong>Copyright &copy; 2019 <a href="https://adminlte.io" class="hidden">Almsaeed Studio</a>.</strong> All rights
-                reserved.
+                <strong>Copyright &copy; <?php echo SESSION_YEAR;?> <a href="https://www.brightcodess.com/" class=""></a><?php echo OUR_BRAND;?></strong> All rights reserved.
             </footer>
         </div>
         <!-- jQuery UI 1.11.4 -->

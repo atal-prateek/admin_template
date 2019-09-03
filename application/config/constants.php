@@ -89,7 +89,9 @@ defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest auto
     $secyear = $curyear+1;
     define('PROJECT_NAME','Matics Test Series'); 
     define('OUR_BRAND',"Brightcode Software Services Pvt Ltd.");
-    define('SESSION_YEAR',"$curyear-$secyear");
+	define('SESSION_YEAR',"$curyear-$secyear");
+	define('SITE_SALT',"Admin Template");
+	define('PRE',"<pre>");
 //////////////////////////////////////////////
 if($_SERVER['HTTP_HOST']=='localhost'){
 	defined('DB_HOST')		? null : define('DB_HOST','localhost');
