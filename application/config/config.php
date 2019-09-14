@@ -23,11 +23,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-if($_SERVER['HTTP_HOST']=='localhost'){
+if(isset($_SERVER['HTTP_HOST']) && $_SERVER['HTTP_HOST']=='localhost'){
 	$config['base_url'] = "http://$_SERVER[HTTP_HOST]/admin_template";
-}
-elseif($_SERVER['HTTP_HOST']=='softwarenew.in'){
-	$config['base_url'] = "http://$_SERVER[HTTP_HOST]/admin_template/index.php";
 }
 else{
 	$config['base_url'] = "http://$_SERVER[HTTP_HOST]";

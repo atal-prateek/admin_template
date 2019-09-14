@@ -50,7 +50,6 @@ class Login extends CI_Controller {
 	public function validatelogin(){
 		
 		$data=$this->input->post();
-		print_r($data);
 		unset($data['login']);
 		$result=$this->Account_model->login($data);
 		if($result['verify']===true){
