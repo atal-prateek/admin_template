@@ -19,31 +19,36 @@
 			}
 		}  
 	}
-	if(!function_exists('checklogin')) {
-  		function checklogin() {
+	if(!function_exists('checkadminlogin')) {
+  		function checkadminlogin() {
     		$CI = get_instance();
-			if($CI->session->userdata('user')===NULL){
+			if($CI->session->user===NULL || $CI->session->role!='admin'){
 				setredirecturl();
-				redirect('login/');
+				redirect(getadminlink('admin/login/'));
 			}
 			else{
 				//getsubmission();
 			}
 		}  
 	}
-	if(!function_exists('loginredirect')) {
-  		function loginredirect($url='/') {
+	if(!function_exists('adminloginredirect')) {
+  		function adminloginredirect($url='admin/') {
     		$CI = get_instance();
-			if($CI->session->userdata('user')!==NULL){
-				if($CI->session->userdata('redirecturl')!=NULL) {
-					$redirecturl=$CI->session->userdata('redirecturl');
+			if($CI->session->user!==NULL && $CI->session->role=='admin'){
+				if($CI->session->redirecturl!=NULL) {
+					$redirecturl=$CI->session->redirecturl;
 					$CI->session->unset_userdata('redirecturl');
 					redirect($redirecturl);
 				}
 				else{
-					redirect($url);
+					redirect(getadminlink($url));
 				}
 			}
+		}  
+	}
+	if(!function_exists('getadminlink')) {
+  		function getadminlink($link) {
+			return str_replace('','',$link);
 		}  
 	}
 ?>
